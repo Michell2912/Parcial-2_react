@@ -1,11 +1,11 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #e3f2fd;
+  background-color: #70bdf5;
   margin: 0;
 }
 
 .contenedor {
-  background-color: white;
+  background-color: rgb(100, 185, 235);
   width: 350px;
   margin: 100px auto;
   padding: 30px;
@@ -15,7 +15,7 @@ body {
 
 h1 {
   text-align: center;
-  color: #0288d1;
+  color: #fdfeff;
 }
 
 label {
