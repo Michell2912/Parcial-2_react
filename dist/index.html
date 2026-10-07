@@ -9,5 +9,7 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <div class="contenedor"> <h1>💧 Calculadora de Agua</h1> <label for="peso">Peso (kg):</label> <input type="number" id="peso" placeholder="Ejemplo: 70"> <label for="altura">Altura (cm):</label> <input type="number" id="altura" placeholder="Ejemplo: 170"> <label for="edad">Edad:</label> <input type="number" id="edad" placeholder="Ejemplo: 20"> <button onclick="calcularAgua()"> Calcular agua </button> <div id="resultado"> Ingresa tus datos para calcular. </div> </div> <script> function calcularAgua() { let peso = parseFloat(document.getElementById("peso").value); let altura = parseFloat(document.getElementById("altura").value); let edad = parseInt(document.getElementById("edad").value); if (isNaN(peso) || isNaN(altura) || isNaN(edad)) { document.getElementById("resultado").innerHTML = "⚠️ Por favor, completa todos los campos."; return; } if (peso <= 0 || altura <= 0 || edad <= 0) { document.getElementById("resultado").innerHTML = "⚠️ Ingresa valores mayores que cero."; return; } let mililitrosPorKg; if (edad < 18) { mililitrosPorKg = 40; } else { mililitrosPorKg = 35; } let agua = peso * mililitrosPorKg; let litros = agua / 1000; document.getElementById("resultado").innerHTML = "💧 Debes tomar aproximadamente:<br><br>" + litros.toFixed(2) + " litros de agua al día<br>" + "(" + agua.toFixed(0) + " ml)"; } </script>
   </body>
 </html>
